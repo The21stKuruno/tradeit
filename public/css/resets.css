@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700");
 /* 
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -158,61 +157,3 @@ select {
 
 a {
   text-decoration: none; }
-
-html {
-  box-sizing: border-box;
-  color: #24292e;
-  font-family: "Roboto Condensed", sans-serif; }
-
-body {
-  background: #fff;
-  line-height: 1.4; }
-
-.container {
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 0 20px; }
-
-header {
-  background: #24292e;
-  color: #f2f2f3;
-  height: 62px;
-  overflow: hidden;
-  width: 100%; }
-  header nav {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-column-gap: 20px;
-    height: 100%; }
-  header .logo {
-    display: grid;
-    justify-self: start; }
-  header .logo-2-item {
-    display: grid;
-    grid-column-gap: 5px;
-    align-items: center;
-    grid-template-columns: auto auto; }
-  header i {
-    font-size: 2rem; }
-  header .nav {
-    display: grid;
-    grid-column-gap: 20px;
-    grid-template-columns: repeat(4, auto);
-    justify-self: center; }
-  header .login-register {
-    display: grid;
-    grid-column-gap: 5px;
-    grid-template-columns: auto auto auto;
-    justify-self: end; }
-  header .or-style {
-    color: #484f57;
-    font-style: italic;
-    font-weight: 700; }
-  header h1 {
-    font-size: 1.4rem; }
-  header a {
-    color: #f2f2f3;
-    font-size: 1.1rem; }
-  header ul {
-    list-style: none; }

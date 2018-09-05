@@ -1,3 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700");
+@import "variables";
+@import "resets";
+@import "mixins";
+
+html {
+  box-sizing: border-box;
+  color: $black;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 body {
-  background: red;
+  background: $white;
+  line-height: 1.4;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+header {
+  background: $black;
+  color: $textColorWhite;
+  height: 62px;
+  overflow: hidden;
+  width: 100%;
+  nav {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 20px;
+    height: 100%;
+  }
+  .logo {
+    display: grid;
+    justify-self: start;
+  }
+  .logo-2-item {
+    display: grid;
+    grid-column-gap: 5px;
+    align-items: center;
+    grid-template-columns: auto auto;
+  }
+  i {
+    font-size: 2rem;
+  }
+  .nav {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(4, auto);
+    justify-self: center;
+  }
+  .login-register {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: auto auto auto;
+    justify-self: end;
+  }
+  .or-style {
+    color: $superDarkGrey;
+    font-style: italic;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  a {
+    color: $textColorWhite;
+    font-size: 1.1rem;
+  }
+  ul {
+    list-style: none;
+  }
 }
