@@ -14,7 +14,8 @@ class Pages extends Controller {
 
   public function about() {
     $data = [
-      'title' => 'About Trade-it'
+      'title' => 'About Us',
+      'description' => 'App to track your trades and improve your trading.'
     ];
 
     $this->view('pages/about', $data);

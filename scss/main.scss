@@ -46,6 +46,7 @@ input {
 
 input:focus {
   border: 1px solid $outline;
+  box-shadow: $outlineShadow;
   transition: 0.2s;
 }
 
@@ -56,6 +57,28 @@ i {
 ul {
   list-style: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 5px;
+}
+
+.pages {
+  height: 650px;
+  padding-top: 120px;
+}
+
+.section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+// End Global
 
 // Header
 
@@ -183,9 +206,30 @@ header {
 
 // End of Main
 
+// Boxes
+.boxes {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  h3 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  i {
+    color: $blue;
+    margin: 10px 0;
+  }
+  p {
+    color: $grey;
+    margin: 10px 0;
+  }
+}
+// End Boxes
+
 // Footer
 footer {
-  background: $white;
+  background: $offWhite;
   height: 68px;
   .container {
     display: grid;
@@ -229,6 +273,18 @@ footer {
 
 // End of Footer
 
+// Pages
+
+// About Page
+section.about {
+  h1 {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+}
+
+// End of Pages
+
 // Responsive
 
 @media only screen and (max-width: 830px) {
@@ -269,6 +325,48 @@ footer {
     }
     form {
       display: none;
+    }
+  }
+  .boxes {
+    grid-template-columns: 1fr;
+  }
+  footer {
+    height: auto;
+    .container {
+      grid-template-columns: 1fr;
+      grid-row-gap: 20px;
+      padding: 10px 0;
+    }
+    ul:first-child {
+      justify-self: center;
+    }
+    ul:last-child {
+      justify-self: center;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  header {
+    .logo,
+    .nav-center,
+    .login-register {
+      justify-self: left;
+    }
+    .nav-center,
+    .login-register {
+      box-sizing: border-box;
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+    .nav-center,
+    .login-register {
+      border-top: 1px solid $grey;
+    }
+    .or-style {
+      display: none;
+    }
+    li {
+      padding: 10px;
     }
   }
 }

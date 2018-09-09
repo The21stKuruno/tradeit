@@ -11,3 +11,5 @@
   define('URLROOT', 'http://localhost/tradeit');
   // Site Namme
   define('SITENAME', 'Trade-it');
+  // App Version
+  define('APPVERSION', '1.0.0');
