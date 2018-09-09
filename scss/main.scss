@@ -1,31 +1,72 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700");
 @import "variables";
 @import "resets";
-@import "mixins";
 
+// Global
 html {
   box-sizing: border-box;
-  color: $black;
   font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
   background: $white;
+  color: $black;
   line-height: 1.4;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1010px;
   padding: 0 20px;
 }
 
+a {
+  color: $blue;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  box-shadow: $inputShadow;
+  border: 1px solid $offGrey;
+  border-radius: 5px;
+  min-height: 2.5rem;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+input:focus {
+  border: 1px solid $outline;
+  transition: 0.2s;
+}
+
+i {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+// Header
+
 header {
   background: $black;
-  color: $textColorWhite;
-  height: 62px;
+  color: $white;
+  height: 72px;
   overflow: hidden;
+  position: fixed;
   width: 100%;
+  z-index: 1;
   nav {
     display: grid;
     align-items: center;
@@ -43,10 +84,7 @@ header {
     align-items: center;
     grid-template-columns: auto auto;
   }
-  i {
-    font-size: 2rem;
-  }
-  .nav {
+  .nav-center {
     display: grid;
     grid-column-gap: 20px;
     grid-template-columns: repeat(4, auto);
@@ -58,19 +96,179 @@ header {
     grid-template-columns: auto auto auto;
     justify-self: end;
   }
-  .or-style {
-    color: $superDarkGrey;
-    font-style: italic;
-    font-weight: 700;
+  .or-style span {
+    display: block;
+    background: #586069;
+    width: 2px;
+    height: 100%;
   }
   h1 {
     font-size: 1.4rem;
   }
   a {
-    color: $textColorWhite;
+    color: $white;
     font-size: 1.1rem;
+    &:hover {
+      color: $offGrey;
+    }
   }
-  ul {
-    list-style: none;
+  i {
+    color: $green;
+    font-size: 2rem;
+  }
+}
+
+// End of Header
+
+// Main
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 38%;
+  grid-column-gap: 50px;
+  div.header {
+    padding: 30px 0;
+    color: $white;
+    margin-top: 160px;
+    h1 {
+      font-size: 3.2rem;
+      width: 100%;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+    p {
+      color: $white;
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+  form {
+    margin: 140px 0;
+    background: $white;
+    border-radius: 3px;
+    padding: 24px;
+    color: $grey;
+    label {
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 5px;
+    }
+    p#pass-warning {
+      text-align: left;
+    }
+    p {
+      margin-top: 5px;
+      margin-bottom: 7px;
+      font-size: 12px;
+      text-align: center;
+      font-weight: 300;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+    input[type="password"] {
+      margin-bottom: 3px;
+    }
+    .btn-signup {
+      color: $white;
+      background: $green;
+      padding: 20px 32px;
+      width: 100%;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// End of Main
+
+// Footer
+footer {
+  background: $white;
+  height: 68px;
+  .container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  ul:first-child {
+    justify-self: start;
+    li:first-child {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+  ul:last-child {
+    justify-self: end;
+    li:last-child {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+  li {
+    color: $grey;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 0 2px;
+    padding: 0 3px;
+  }
+  a {
+    color: $grey;
+    &:hover {
+      color: $blue;
+    }
+  }
+  a i {
+    color: $offGrey;
+    font-size: 1.3rem;
+  }
+}
+
+// End of Footer
+
+// Responsive
+
+@media only screen and (max-width: 830px) {
+  header {
+    height: auto;
+    position: relative;
+    nav {
+      grid-template-columns: 1fr;
+    }
+    .logo,
+    .nav-center,
+    .login-register {
+      justify-self: center;
+      margin: 0 0 1rem 0;
+    }
+    .logo {
+      margin-top: 1.3rem;
+    }
+  }
+  .main {
+    div.header {
+      margin-top: 70px;
+    }
+    form {
+      margin-top: 90px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    div.header {
+      width: 100%;
+      text-align: center;
+    }
+    form {
+      display: none;
+    }
   }
 }

@@ -6,16 +6,16 @@
     </a>
   </div>
 
-  <ul class="nav">
+  <ul class="nav-center">
     <li><a href="#">Home</a></li>
+    <li><a href="#">Getting Started</a></li>
     <li><a href="#">Trade Journal</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#">About Us</a></li>
   </ul>
 
   <ul class="login-register">
     <li><a href="#">Sign In</a></li>
-    <li class="or-style">|</li>
+    <li class="or-style"><span></span></li>
     <li><a href="#">Sign Up</a></li>
   </ul>
 </nav>

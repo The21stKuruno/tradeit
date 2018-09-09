@@ -156,29 +156,59 @@ input,
 select {
   vertical-align: middle; }
 
-a {
-  text-decoration: none; }
-
 html {
   box-sizing: border-box;
-  color: #24292e;
   font-family: "Roboto Condensed", sans-serif; }
 
 body {
-  background: #fff;
+  background: #fafbfc;
+  color: #24292e;
   line-height: 1.4; }
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px; }
 
 .container {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1010px;
   padding: 0 20px; }
+
+a {
+  color: #1277eb;
+  text-decoration: none;
+  transition: 0.2s; }
+
+input {
+  display: block;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+  border: 1px solid #b5babf;
+  border-radius: 5px;
+  min-height: 2.5rem;
+  outline: none;
+  padding: 10px;
+  width: 100%; }
+
+input:focus {
+  border: 1px solid #2188ff;
+  transition: 0.2s; }
+
+i {
+  display: block; }
+
+ul {
+  list-style: none; }
 
 header {
   background: #24292e;
-  color: #f2f2f3;
-  height: 62px;
+  color: #fafbfc;
+  height: 72px;
   overflow: hidden;
-  width: 100%; }
+  position: fixed;
+  width: 100%;
+  z-index: 1; }
   header nav {
     display: grid;
     align-items: center;
@@ -193,9 +223,7 @@ header {
     grid-column-gap: 5px;
     align-items: center;
     grid-template-columns: auto auto; }
-  header i {
-    font-size: 2rem; }
-  header .nav {
+  header .nav-center {
     display: grid;
     grid-column-gap: 20px;
     grid-template-columns: repeat(4, auto);
@@ -205,14 +233,127 @@ header {
     grid-column-gap: 5px;
     grid-template-columns: auto auto auto;
     justify-self: end; }
-  header .or-style {
-    color: #484f57;
-    font-style: italic;
-    font-weight: 700; }
+  header .or-style span {
+    display: block;
+    background: #586069;
+    width: 2px;
+    height: 100%; }
   header h1 {
     font-size: 1.4rem; }
   header a {
-    color: #f2f2f3;
+    color: #fafbfc;
     font-size: 1.1rem; }
-  header ul {
-    list-style: none; }
+    header a:hover {
+      color: #b5babf; }
+  header i {
+    color: #28a745;
+    font-size: 2rem; }
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 38%;
+  grid-column-gap: 50px; }
+  .main div.header {
+    padding: 30px 0;
+    color: #fafbfc;
+    margin-top: 160px; }
+    .main div.header h1 {
+      font-size: 3.2rem;
+      width: 100%; }
+    .main div.header h3 {
+      font-size: 1.3rem; }
+    .main div.header p {
+      color: #fafbfc;
+      margin-top: 10px;
+      width: 100%; }
+  .main form {
+    margin: 140px 0;
+    background: #fafbfc;
+    border-radius: 3px;
+    padding: 24px;
+    color: #484f57; }
+    .main form label {
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 5px; }
+    .main form p#pass-warning {
+      text-align: left; }
+    .main form p {
+      margin-top: 5px;
+      margin-bottom: 7px;
+      font-size: 12px;
+      text-align: center;
+      font-weight: 300; }
+    .main form input {
+      margin-bottom: 10px; }
+    .main form input[type="password"] {
+      margin-bottom: 3px; }
+    .main form .btn-signup {
+      color: #fafbfc;
+      background: #28a745;
+      padding: 20px 32px;
+      width: 100%;
+      font-weight: 500;
+      font-size: 1.1rem; }
+
+footer {
+  background: #fafbfc;
+  height: 68px; }
+  footer .container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; }
+  footer ul:first-child {
+    justify-self: start; }
+    footer ul:first-child li:first-child {
+      margin-left: 0;
+      padding-left: 0; }
+  footer ul:last-child {
+    justify-self: end; }
+    footer ul:last-child li:last-child {
+      margin-right: 0;
+      padding-right: 0; }
+  footer li {
+    color: #484f57;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 0 2px;
+    padding: 0 3px; }
+  footer a {
+    color: #484f57; }
+    footer a:hover {
+      color: #1277eb; }
+  footer a i {
+    color: #b5babf;
+    font-size: 1.3rem; }
+
+@media only screen and (max-width: 830px) {
+  header {
+    height: auto;
+    position: relative; }
+    header nav {
+      grid-template-columns: 1fr; }
+    header .logo,
+    header .nav-center,
+    header .login-register {
+      justify-self: center;
+      margin: 0 0 1rem 0; }
+    header .logo {
+      margin-top: 1.3rem; }
+  .main div.header {
+    margin-top: 70px; }
+  .main form {
+    margin-top: 90px; } }
+
+@media only screen and (max-width: 767px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px; }
+    .main div.header {
+      width: 100%;
+      text-align: center; }
+    .main form {
+      display: none; } }
