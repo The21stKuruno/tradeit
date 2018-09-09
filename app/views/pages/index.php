@@ -6,16 +6,17 @@
         <h3>Goodbye Excel spreadsheets, hello Trade Journal.</h3>
         <p>Log your stock trades in the cloud, track your mistakes, test new strategies, and improve your trading.</p>
       </div>
-      <form class="container" action="<?php echo URLROOT; ?>/users/signup.php" method="POST">
+      <form class="container" action="<?php echo URLROOT; ?>/users/signup" method="POST">
         <label for="username">Username</label>
         <input id="username" type="text" placeholder="Pick a username">
-        <label for="email">Email</label>
+        <label for="email">Email Address</label>
         <input id="email" type="email" placeholder="you@example.com">
         <label for="password">Password</label>
-        <input type="password" autocomplete="new-password" placeholder="Create a password">
-        <p id="pass-warning">Use at least one letter, one numeral, and seven characters.</p>
+        <input id="password" type="password" autocomplete="new-password" placeholder="Create a password">
+        <label for="confirm-password">Confirm password</label>
+        <input id="confirm-password" type="password" autocomplete="new-password" placeholder="Re-type password">
         <button class="btn-signup" type="submit">Sign up for Trade-it</button>
-        <p>By clicking “Sign up for Trade-it”, you agree to our  <a href="#">terms of service</a> and <a href="#">privacy statement</a> . We’ll occasionally send you account related emails.</p>
+        <p class="terms">By clicking “Sign up for Trade-it”, you agree to our  <a href="#">terms of service</a> and <a href="#">privacy statement</a> . We’ll occasionally send you account related emails.</p>
       </form>
     </div>
   </section>

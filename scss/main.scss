@@ -38,9 +38,7 @@ input {
   box-shadow: $inputShadow;
   border: 1px solid $offGrey;
   border-radius: 5px;
-  min-height: 2.5rem;
   outline: none;
-  padding: 10px;
   width: 100%;
 }
 
@@ -69,13 +67,22 @@ p {
 }
 
 .pages {
-  height: 650px;
+  min-height: 650px;
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .section {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+p.terms {
+  margin-top: 5px;
+  margin-bottom: 7px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 300;
 }
 
 // End Global
@@ -97,15 +104,22 @@ header {
     grid-column-gap: 20px;
     height: 100%;
   }
+
   .logo {
     display: grid;
     justify-self: start;
   }
-  .logo-2-item {
+
+  a.logo-2-item {
     display: grid;
     grid-column-gap: 5px;
-    align-items: center;
+    align-content: center;
     grid-template-columns: auto auto;
+  }
+
+  a i {
+    color: $green;
+    font-size: 2rem;
   }
   .nav-center {
     display: grid;
@@ -135,10 +149,6 @@ header {
       color: $offGrey;
     }
   }
-  i {
-    color: $green;
-    font-size: 2rem;
-  }
 }
 
 // End of Header
@@ -152,7 +162,7 @@ header {
   div.header {
     padding: 30px 0;
     color: $white;
-    margin-top: 160px;
+    margin-top: 200px;
     h1 {
       font-size: 3.2rem;
       width: 100%;
@@ -177,26 +187,15 @@ header {
       display: block;
       margin-bottom: 5px;
     }
-    p#pass-warning {
-      text-align: left;
-    }
-    p {
-      margin-top: 5px;
-      margin-bottom: 7px;
-      font-size: 12px;
-      text-align: center;
-      font-weight: 300;
-    }
     input {
+      min-height: 2.5rem;
       margin-bottom: 10px;
-    }
-    input[type="password"] {
-      margin-bottom: 3px;
+      padding: 10px;
     }
     .btn-signup {
       color: $white;
       background: $green;
-      padding: 20px 32px;
+      padding: 13px 32px;
       width: 100%;
       font-weight: 500;
       font-size: 1.1rem;
@@ -275,7 +274,79 @@ footer {
 
 // Pages
 
-// About Page
+// Signin
+section.enter {
+  max-width: 400px;
+  a.logo-signin {
+    display: block;
+    color: $black;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  a i {
+    display: inline;
+    color: $green;
+    font-size: 2rem;
+  }
+  a h1 {
+    display: inline;
+    font-size: 1.7rem;
+  }
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  form {
+    border: 1px solid #d9dadb;
+    border-radius: 3px;
+    background: #f8f9fa;
+    padding: 30px;
+    label[for="username"] {
+      width: 100%;
+      display: block;
+    }
+  }
+  input {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  label,
+  .forgot-password {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+  div.arrange {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .forgot-password {
+    justify-self: end;
+  }
+  .btn-signin {
+    margin: 10px 0;
+    color: $white;
+    background: $green;
+    padding: 8px 0;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  div.new-to-trade-it {
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid #d9dadb;
+    border-radius: 3px;
+    background: #f8f9fa;
+    padding: 10px;
+  }
+}
+
+// About
 section.about {
   h1 {
     font-size: 3.2rem;
@@ -306,7 +377,7 @@ section.about {
   }
   .main {
     div.header {
-      margin-top: 70px;
+      margin-top: 120px;
     }
     form {
       margin-top: 90px;
@@ -320,6 +391,7 @@ section.about {
     grid-template-columns: 1fr;
     grid-column-gap: 20px;
     div.header {
+      margin-top: 70px;
       width: 100%;
       text-align: center;
     }
