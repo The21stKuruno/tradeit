@@ -8,14 +8,18 @@
     </a>
     <h3>Create your personal account</h3>
     <label for="username">Username</label>
-    <input type="text" id="username" value=""  placeholder="Pick username">
+    <input type="text" name="username" id="username"  placeholder="Pick username" value="<?php echo $data['username']; ?>">
+    <span class="invalid-feedback"><?php echo $data['username_err']; ?></span>
     <label for="email">Email address</label>
-    <input type="email" id="email"  placeholder="you@example.com" value="">
+    <input type="email" name="email" id="email"  placeholder="you@example.com" value="">
+    <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
     <label for="password">Password</label>
     </div>
-    <input id="password" type="password" autocomplete="new-password"  placeholder="Create password">
+    <input id="password" name="password" type="password" autocomplete="new-password"  placeholder="Create password">
+    <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
     <label for="confirm-password">Confirm password</label>
-    <input id="confirm-password" type="password" autocomplete="new-password" placeholder="Re-type password">
+    <input id="confirm-password" name="confirm_password" type="password" autocomplete="new-password" placeholder="Re-type password">
+    <span class="invalid-feedback"><?php echo $data['confirm_password_err']; ?></span>
     <button class="btn-signin">Create an account</button>
     <p class="terms">By clicking “Create an account”, you agree to our  <a href="#">terms of service</a> and <a href="#">privacy statement</a> . We’ll occasionally send you account related emails.</p>
   </form>
