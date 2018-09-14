@@ -1,6 +1,6 @@
 <nav class="container">
-  <div class="logo">
-    <a href="<?php echo URLROOT; ?>" class="logo-2-item">
+  <div class="nav-left">
+    <a href="<?php echo URLROOT; ?>" class="logo">
       <i class="fas fa-chart-line"></i>
       <h1>Trade-it</h1>
     </a>
@@ -13,7 +13,7 @@
     <li><a href="<?php echo URLROOT; ?>/pages/about">About Us</a></li>
   </ul>
 
-  <ul class="login-register">
+  <ul class="nav-right">
     <li><a href="<?php echo URLROOT; ?>/users/signin">Sign In</a></li>
     <li class="or-style"><span></span></li>
     <li><a href="<?php echo URLROOT; ?>/users/signup">Sign Up</a></li>
