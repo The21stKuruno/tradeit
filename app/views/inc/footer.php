@@ -2,8 +2,8 @@
   <div class="container">
     <ul>
       <li>&copy; 2018 Trade-it, Inc.</li>
-      <li><a href="#">Terms</a></li>
-      <li><a href="#">Privacy</a></li>
+      <li><a href="#" class="under-hover">Terms</a></li>
+      <li><a href="#" class="under-hover">Privacy</a></li>
     </ul>
     <ul> 
       <li><a href="#"><i class="fab fa-twitter"></i></a></li>

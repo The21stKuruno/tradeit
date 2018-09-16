@@ -5,7 +5,7 @@
 // Global
 html {
   box-sizing: border-box;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -32,6 +32,12 @@ a {
   transition: 0.2s;
 }
 
+a.under-hover {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 input {
   display: block;
   box-sizing: border-box;
@@ -56,6 +62,22 @@ i {
   margin-top: 3rem;
   margin-bottom: 3rem;
   min-height: 500px;
+}
+
+.btn {
+  margin: 10px 0;
+  color: $white;
+  background: $green;
+  padding: 8px 0;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+span.or-style {
+  display: block;
+  background: #586069;
+  width: 2px;
+  height: 100%;
 }
 
 // End Global
@@ -110,12 +132,6 @@ header {
     grid-template-columns: auto auto auto;
     justify-self: end;
   }
-  .or-style span {
-    display: block;
-    background: #586069;
-    width: 2px;
-    height: 100%;
-  }
 }
 
 // End of Header
@@ -168,40 +184,37 @@ footer {
 
 // Signin Signup
 .form-two-row {
-  max-width: 400px;
+  max-width: 445px;
   margin: 0 auto;
-}
-.first-row,
-.second-row {
-  border: 1px solid #d9dadb;
-  border-radius: 3px;
-  background: #f8f9fa;
-  padding: 2rem 1.7rem;
-  margin-bottom: 1rem;
-}
-.second-row {
-  text-align: center;
-  padding: 1rem 0;
-}
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-input {
-  padding: 8px;
-  margin-bottom: 10px;
-}
-.btn {
-  margin: 10px 0;
-  color: $white;
-  background: $green;
-  padding: 8px 0;
-  width: 100%;
-  font-size: 1.1rem;
+  .first-row,
+  .second-row {
+    border: 1px solid #d9dadb;
+    border-radius: 3px;
+    background: #f8f9fa;
+    padding: 2rem 1.7rem;
+    margin-bottom: 1rem;
+  }
+  .second-row {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  #pass-forgot {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
 }
 
 // Home
@@ -210,5 +223,9 @@ input {
   h1 {
     font-size: 3.2rem;
     font-weight: 400;
+  }
+  p {
+    margin-bottom: 1rem;
+    width: 50%;
   }
 }

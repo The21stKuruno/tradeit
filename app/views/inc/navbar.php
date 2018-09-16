@@ -15,7 +15,7 @@
 
   <ul class="nav-right">
     <li><a href="<?php echo URLROOT; ?>/users/signin">Sign In</a></li>
-    <li class="or-style"><span></span></li>
+    <li><span class="or-style"></span></li>
     <li><a href="<?php echo URLROOT; ?>/users/signup">Sign Up</a></li>
   </ul>
 </nav>

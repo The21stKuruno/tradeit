@@ -14,7 +14,7 @@
       <button class="btn">Sign up</button>
     </form>
     <div class="second-row">
-      <p>Have an account? <a href="<?php echo URLROOT; ?>/users/signin">Sign In</a>.</p>
+      <p>Have an account? <a class="under-hover" href="<?php echo URLROOT; ?>/users/signin">Sign in to Trade-it</a>.</p>
     </div>
   </div>
 </section>
