@@ -1,0 +1,42 @@
+footer {
+  background: $offWhite;
+  height: 68px;
+  .container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  ul:first-child {
+    justify-self: start;
+    li:first-child {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+  ul:last-child {
+    justify-self: end;
+    li:last-child {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+  li {
+    color: $grey;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 0 2px;
+    padding: 0 3px;
+  }
+  a {
+    color: $grey;
+    &:hover {
+      color: $blue;
+    }
+  }
+  i {
+    color: $offGrey;
+    font-size: 1.3rem;
+  }
+}

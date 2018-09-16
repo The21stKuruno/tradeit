@@ -1,0 +1,33 @@
+.form-two-row {
+  max-width: 445px;
+  margin: 0 auto;
+  .first-row,
+  .second-row {
+    border: 1px solid #d9dadb;
+    border-radius: 3px;
+    background: #f8f9fa;
+    padding: 2rem 1.7rem;
+    margin-bottom: 1rem;
+  }
+  .second-row {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  #pass-forgot {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+}

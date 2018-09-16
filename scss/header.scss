@@ -1,0 +1,49 @@
+header {
+  background: $black;
+  color: $white;
+  height: 62px;
+  overflow: hidden;
+  width: 100%;
+  nav {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    height: 100%;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  a {
+    color: $white;
+    &:hover {
+      color: $offGrey;
+    }
+  }
+  .nav-left {
+    display: grid;
+    justify-self: start;
+  }
+  .logo {
+    display: grid;
+    grid-column-gap: 5px;
+    align-content: center;
+    grid-template-columns: auto auto;
+  }
+  i {
+    color: $green;
+    font-size: 1.8rem;
+  }
+  .nav-center {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(4, auto);
+    justify-self: center;
+  }
+  .nav-right {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: auto auto auto;
+    justify-self: end;
+  }
+}
